@@ -9,7 +9,7 @@ const Memoji = () => (
     <Image
       className={styles.image}
       alt="Yuri Cunha"
-      src="/images/memoji.gif"
+      src="/images/me.jpg"
       width={80}
       height={64}
     />
