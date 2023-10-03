@@ -1,6 +1,6 @@
 # links.yuricunha.com
 
-[![Vercel](https://vercelbadge.vercel.app/api/yuricunha/links.yuricunha.com)](https://links.yuricunha.com)
+[![Vercel](https://vercelbadge.vercel.app/api/isyuricunha/links.yuricunha.com)](https://links.yuricunha.com)
 
 My digital business card.
 
