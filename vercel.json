@@ -1,0 +1,62 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/website",
+      "destination": "https://yuricunha.com/"
+    },
+    {
+      "source": "/twitter",
+      "destination": "https://twitter.com/isyuricunha"
+    },
+    {
+      "source": "/x",
+      "destination": "https://x.com/isyuricunha"
+    },
+    {
+      "source": "/github",
+      "destination": "https://github.com/isyuricunha"
+    },
+    {
+      "source": "/linkedin",
+      "destination": "https://www.linkedin.com/in/isyuricunha/"
+    },
+    {
+      "source": "/figma",
+      "destination": "https://www.figma.com/@isyuricunha"
+    },
+    {
+      "source": "/dribbble",
+      "destination": "https://dribbble.com/isyuricunha"
+    },
+    {
+      "source": "/producthunt",
+      "destination": "https://www.producthunt.com/@isyuricunha"
+    },
+    {
+      "source": "/oku",
+      "destination": "https://oku.club/user/isyuricunha"
+    },
+    {
+      "source": "/books",
+      "destination": "https://oku.club/user/isyuricunha"
+    },
+    {
+      "source": "/readcv",
+      "destination": "https://read.cv/isyuricunha"
+    },
+    {
+      "source": "/cv",
+      "destination": "https://read.cv/isyuricunha"
+    },
+    {
+      "source": "/resume",
+      "destination": "https://read.cv/isyuricunha"
+    },
+    {
+      "source": "/arena",
+      "destination": "https://www.are.na/yuri-cunha"
+    }
+  ]
+}

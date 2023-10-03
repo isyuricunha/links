@@ -1,0 +1,6 @@
+.cache
+node_modules
+/public
+serviceWorker.js
+/out
+/.next

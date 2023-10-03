@@ -1,0 +1,22 @@
+.grid {
+  position: fixed;
+  z-index: -1;
+  padding: 0 16px;
+  max-width: 1064px;
+  margin: 0 auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  span {
+    grid-column: span 1;
+    border-left: 1px dashed #EBEBEB;
+    border-right: 1px dashed #EBEBEB;
+
+    @media (prefers-color-scheme: dark) {
+      border-left: 1px dashed #1E1E1E;
+      border-right: 1px dashed #1E1E1E;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "isyuricunha",
+  "description": "Personal quick link page",
+  "version": "0.1.0",
+  "private": true,
+  "author": {
+    "name": "Yuri Cunha",
+    "url": "https://x.com/isyuricunha"
+  },
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@vercel/analytics": "^1.0.2",
+    "eslint-config-next": "^13.4.16",
+    "next": "^13.4.16",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "1.68.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.50.0"
+  }
+}
