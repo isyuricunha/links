@@ -10,7 +10,7 @@ export default function MyApp({ Component, pageProps }) {
     title: "Yuri - Senior Database Administrator",
     description:
       "I excel in managing and optimizing complex databases, ensuring efficient data storage, retrieval, and security. My expertise lies in maintaining and fine-tuning database systems to support seamless business operations.",
-    image: "https://yuricunha.com/images/og-site-cover.png",
+    image: "https://yuricunha.com/static/images/tech.png",
   };
 
   return (
