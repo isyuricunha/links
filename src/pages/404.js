@@ -8,39 +8,35 @@ import Icon from "@/components/Icon";
 
 const links = [
   {
-    name: "Website",
-    link: "links.yuricunha.com/website",
-    url: "https://yuricunha.com/",
-  },
-  {
-    name: "X",
-    link: "links.yuricunha.com/x",
-    url: "https://x.com/isyuricunha",
-  },
-  {
-    name: "Figma",
-    link: "links.yuricunha.com/figma",
-    url: "https://www.figma.com/@isyuricunha",
-  },
-  {
     name: "GitHub",
     link: "links.yuricunha.com/github",
     url: "https://github.com/isyuricunha",
   },
   {
-    name: "Dribbble",
-    link: "links.yuricunha.com/dribbble",
-    url: "https://dribbble.com/isyuricunha",
+    name: "LinkedIn",
+    link: "links.yuricunha.com/linkedin",
+    url: "https://www.linkedin.com/in/isyuricunha/",
   },
   {
-    name: "readcv",
+    name: "ReadCV",
     link: "links.yuricunha.com/readcv",
     url: "https://read.cv/isyuricunha",
   },
   {
-    name: "LinkedIn",
-    link: "links.yuricunha.com/linkedin",
-    url: "https://www.linkedin.com/in/isyuricunha/",
+    name: "Telegram",
+    link: "links.yuricunha.com/telegram",
+    url: "https://t.me/isyuricunha",
+  },
+  {
+    name: "Website",
+    link: "links.yuricunha.com/website",
+    url: "https://yuricunha.com/",
+  },
+  {
+    name: "X/Twitter",
+    link: "links.yuricunha.com/x",
+    link: "links.yuricunha.com/twitter",
+    url: "https://twitter.com/isyuricunha",
   },
 ];
 
