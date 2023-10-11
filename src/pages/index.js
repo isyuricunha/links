@@ -8,6 +8,11 @@ import Icon from "@/components/Icon";
 
 const links = [
   {
+    name: "Blog",
+    link: "links.yuricunha.com/blog",
+    url: "https://yuricunha.com/blog",
+  },
+  {
     name: "GitHub",
     link: "links.yuricunha.com/github",
     url: "https://github.com/isyuricunha",
