@@ -8,8 +8,7 @@ import "@/styles/globals.scss";
 export default function MyApp({ Component, pageProps }) {
   const meta = {
     title: "Yuri Cunha | @isyuricunha - Senior Database Administrator",
-    description:
-      "I excel in managing and optimizing complex databases, ensuring efficient data storage, retrieval, and security. My expertise lies in maintaining and fine-tuning database systems to support seamless business operations.",
+    description: "Yes?",
     image: "https://yuricunha.com/static/images/tech.png",
   };
 
