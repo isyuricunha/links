@@ -8,6 +8,11 @@ import Icon from "@/components/Icon";
 
 const links = [
   {
+    name: "Blog",
+    link: "links.yuricunha.com/blog",
+    url: "https://yuricunha.com/blog",
+  },
+  {
     name: "GitHub",
     link: "links.yuricunha.com/github",
     url: "https://github.com/isyuricunha",
@@ -52,10 +57,8 @@ const Index = () => (
       </div>
       <div className="card shadow card-quote">
         <p className="body-md">
-          I excel in managing and optimizing complex databases, ensuring
-          efficient data storage, retrieval, and security. My expertise lies in
-          maintaining and fine-tuning database systems to support seamless
-          business operations.
+          Just another guy trying to speed up the supermarket line with the
+          power of the mind. Definitely born on Earth, not in gamma-7 quadrant.
         </p>
       </div>
       <div className="card shadow card-find-me-online">

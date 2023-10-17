@@ -9,7 +9,7 @@ export default function MyApp({ Component, pageProps }) {
   const meta = {
     title: "Yuri Cunha | @isyuricunha - Senior Database Administrator",
     description:
-      "I excel in managing and optimizing complex databases, ensuring efficient data storage, retrieval, and security. My expertise lies in maintaining and fine-tuning database systems to support seamless business operations.",
+      "Just another guy trying to speed up the supermarket line with the power of the mind. Definitely born on Earth, not in gamma-7 quadrant.",
     image: "https://yuricunha.com/static/images/tech.png",
   };
 
