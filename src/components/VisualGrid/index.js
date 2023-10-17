@@ -1,5 +1,5 @@
 // Styles
-import styles from './VisualGrid.module.scss'
+import styles from "./VisualGrid.module.scss";
 
 const VisualGrid = () => (
   <div className={`${styles.grid} grid`}>
@@ -16,6 +16,6 @@ const VisualGrid = () => (
     <span />
     <span />
   </div>
-)
+);
 
-export default VisualGrid
+export default VisualGrid;
