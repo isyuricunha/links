@@ -8,7 +8,8 @@ import "@/styles/globals.scss";
 export default function MyApp({ Component, pageProps }) {
   const meta = {
     title: "Yuri Cunha | @isyuricunha - Senior Database Administrator",
-    description: "Yes?",
+    description:
+      "Just another guy trying to speed up the supermarket line with the power of the mind. Definitely born on Earth, not in gamma-7 quadrant.",
     image: "https://yuricunha.com/static/images/tech.png",
   };
 
