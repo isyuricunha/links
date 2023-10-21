@@ -1,17 +1,17 @@
 .memoji {
-  min-width: 64px;
-  max-width: 128px;
-  min-height: 64px;
-  max-height: 128px;
-  overflow: hidden;
-  border-radius: 999px;
-  background-color: #f8f8f8;
+  min-width: 128px;
+  max-width: 150px;
+  min-height: 128px;
+  max-height: 150px;
+  overflow: auto;
+  border-radius: 99%;
+  // background-color: #f8f8f8;
 
-  @media (prefers-color-scheme: dark) {
-    background-color: #2d2d2d;
-  }
+  // @media (prefers-color-scheme: dark) {
+  //   background-color: #2d2d2d;
+  // }
 
   .image {
-    object-position: -8px 0;
+    object-position: top;
   }
 }
