@@ -9,43 +9,43 @@ import Icon from "@/components/Icon";
 const links = [
 	{
 		name: "Blog",
-		link: "www.inks.yuricunha.com/blog",
+		link: "www.links.yuricunha.com/blog",
 		url: "https://yuricunha.com/blog",
 	},
 	{
 		name: "GitHub",
-		link: "www.inks.yuricunha.com/github",
+		link: "www.links.yuricunha.com/github",
 		url: "https://github.com/isyuricunha",
 	},
 	{
 		name: "LinkedIn",
-		link: "www.inks.yuricunha.com/linkedin",
+		link: "www.links.yuricunha.com/linkedin",
 		url: "https://www.linkedin.com/in/isyuricunha/",
 	},
 	{
 		name: "Meeting",
-		link: "www.inks.yuricunha.com/meeting",
+		link: "www.links.yuricunha.com/meeting",
 		url: "https://cal.com/isyuricunha",
 	},
 	{
 		name: "ReadCV",
-		link: "www.inks.yuricunha.com/readcv",
+		link: "www.links.yuricunha.com/readcv",
 		url: "https://read.cv/isyuricunha",
 	},
 	{
 		name: "Telegram",
-		link: "www.inks.yuricunha.com/telegram",
+		link: "www.links.yuricunha.com/telegram",
 		url: "https://t.me/isyuricunha",
 	},
 	{
 		name: "Website",
-		link: "www.inks.yuricunha.com/website",
+		link: "www.links.yuricunha.com/website",
 		url: "https://yuricunha.com/",
 	},
 	{
 		name: "X/Twitter",
-		link: "www.inks.yuricunha.com/x",
-		link: "www.inks.yuricunha.com/twitter",
+		link: "www.links.yuricunha.com/x",
+		link: "www.links.yuricunha.com/twitter",
 		url: "https://twitter.com/isyuricunha",
 	},
 ];
