@@ -6,6 +6,7 @@ import Memoji from "@/components/Memoji";
 import VisualGrid from "@/components/VisualGrid";
 import Icon from "@/components/Icon";
 
+// Code
 const links = [
 	{
 		name: "Blog",
