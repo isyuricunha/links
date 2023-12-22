@@ -14,6 +14,11 @@ const links = [
 		url: "https://yuricunha.com/blog",
 	},
 	{
+		name: "Boo",
+		link: "www.links.yuricunha.com/boo",
+		url: "https://signup.boo.world/jejk",
+	},
+	{
 		name: "GitHub",
 		link: "www.links.yuricunha.com/github",
 		url: "https://github.com/isyuricunha",
@@ -32,6 +37,11 @@ const links = [
 		name: "ReadCV",
 		link: "www.links.yuricunha.com/readcv",
 		url: "https://read.cv/isyuricunha",
+	},
+	{
+		name: "Spotify",
+		link: "www.links.yuricunha.com/spotify",
+		url: "https://open.spotify.com/user/22wrcoowop6hb63heywvtaypy?si=0c5eaae33c0d4a4c",
 	},
 	{
 		name: "Telegram",
