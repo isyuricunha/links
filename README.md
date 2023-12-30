@@ -24,3 +24,7 @@ yarn dev
 ## Inspired by
 
 This digital business card project is inspired by the digital business cards of [Didier Catz](https://didier.cz/) and [Jesse Vermeulen](https://jesse.es/).
+
+## based on Lorenzo links
+
+[Lorenzo Links Repo](https://github.com/lorenzodelijser/lorenzo.link)
