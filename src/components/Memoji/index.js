@@ -5,15 +5,15 @@ import Image from "next/image";
 import styles from "./Memoji.module.scss";
 
 const Memoji = () => (
-  <div className={`${styles.memoji} magnify`}>
-    <Image
-      className={styles.image}
-      alt="Yuri Cunha"
-      src="/images/yuricunha-memoji.png"
-      width={140}
-      height={128}
-    />
-  </div>
+	<div className={`${styles.memoji} magnify`}>
+		<Image
+			className={styles.image}
+			alt="Yuri Cunha"
+			src="/images/yuricunha-anime.jpg"
+			width={140}
+			height={128}
+		/>
+	</div>
 );
 
 export default Memoji;
