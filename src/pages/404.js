@@ -44,11 +44,6 @@ const links = [
 		url: "https://open.spotify.com/user/22wrcoowop6hb63heywvtaypy?si=0c5eaae33c0d4a4c",
 	},
 	{
-		name: "Telegram",
-		link: "www.links.yuricunha.com/telegram",
-		url: "https://t.me/isyuricunha",
-	},
-	{
 		name: "Website",
 		link: "www.links.yuricunha.com/website",
 		url: "https://yuricunha.com/",
@@ -109,7 +104,7 @@ const Index = () => (
 					<p className="body-md">Get in contact</p>
 				</div>
 				<a
-					href="mailto:me@yuricunha.com"
+					href="mailto:isyuricunha@duck.com"
 					target="_blank"
 					rel="noreferrer"
 					className="button magnify"
