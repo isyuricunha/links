@@ -55,6 +55,11 @@ export default function MyApp({ Component, pageProps }) {
 					rel="preload"
 					type="font/woff2"
 				/>
+				<script
+					defer
+					src="https://umami.yuricunha.com/script.js"
+					data-website-id="ae078a6c-02fb-45c2-96d3-3274da991093"
+				></script>
 			</Head>
 			<Component {...pageProps} />
 			<Analytics />
