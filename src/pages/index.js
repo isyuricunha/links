@@ -94,7 +94,7 @@ const Index = () => (
 					<p className="body-md">Get in contact</p>
 				</div>
 				<a
-					href="mailto:isyuricunha@duck.com"
+					href="mailto:me@yuricunha.com"
 					target="_blank"
 					rel="noreferrer"
 					className="button magnify"
