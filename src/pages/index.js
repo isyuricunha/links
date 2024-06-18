@@ -14,9 +14,9 @@ const links = [
 		url: "https://yuricunha.com/blog",
 	},
 	{
-		name: "Boo",
-		link: "www.links.yuricunha.com/boo",
-		url: "https://signup.boo.world/jejk",
+		name: "GitHub",
+		link: "www.links.yuricunha.com/github",
+		url: "https://github.com/isyuricunha",
 	},
 	{
 		name: "LinkedIn",
