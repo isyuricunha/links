@@ -19,11 +19,6 @@ const links = [
 		url: "https://signup.boo.world/jejk",
 	},
 	{
-		name: "GitHub",
-		link: "www.links.yuricunha.com/github",
-		url: "https://github.com/isyuricunha",
-	},
-	{
 		name: "LinkedIn",
 		link: "www.links.yuricunha.com/linkedin",
 		url: "https://www.linkedin.com/in/isyuricunha/",
@@ -32,11 +27,6 @@ const links = [
 		name: "Meeting",
 		link: "www.links.yuricunha.com/meeting",
 		url: "https://cal.com/isyuricunha",
-	},
-	{
-		name: "ReadCV",
-		link: "www.links.yuricunha.com/readcv",
-		url: "https://read.cv/isyuricunha",
 	},
 	{
 		name: "Spotify",
