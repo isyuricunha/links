@@ -45,7 +45,7 @@ const Index = () => (
 				<Memoji />
 				<div className="wrap-vertical">
 					<h1 className="heading-sm">Yuri Cunha</h1>
-					<p className="body-md">Senior Database Administrator</p>
+					<p className="body-md">Senior Cloud and Infrastructure Specialist</p>
 				</div>
 			</div>
 			<div className="card shadow card-quote">
