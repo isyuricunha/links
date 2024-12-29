@@ -10,38 +10,30 @@ import Icon from "@/components/Icon";
 const links = [
 	{
 		name: "Blog",
-		link: "www.links.yuricunha.com/blog",
 		url: "https://yuricunha.com/blog",
 	},
 	{
 		name: "GitHub",
-		link: "www.links.yuricunha.com/github",
 		url: "https://github.com/isyuricunha",
 	},
 	{
 		name: "LinkedIn",
-		link: "www.links.yuricunha.com/linkedin",
 		url: "https://www.linkedin.com/in/isyuricunha/",
 	},
 	{
 		name: "Meeting",
-		link: "www.links.yuricunha.com/meeting",
 		url: "https://cal.com/isyuricunha",
 	},
 	{
 		name: "Spotify",
-		link: "www.links.yuricunha.com/spotify",
 		url: "https://open.spotify.com/user/22wrcoowop6hb63heywvtaypy?si=0c5eaae33c0d4a4c",
 	},
 	{
 		name: "Website",
-		link: "www.links.yuricunha.com/website",
 		url: "https://yuricunha.com/",
 	},
 	{
 		name: "X/Twitter",
-		link: "www.links.yuricunha.com/x",
-		link: "www.links.yuricunha.com/twitter",
 		url: "https://twitter.com/isyuricunha",
 	},
 ];
