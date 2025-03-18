@@ -1,30 +1,45 @@
-# links.yuricunha.com
+<p align="center">
+  <img src="https://honghong.me/images/projects/links/cover.png">
+</p>
 
-[![Vercel](https://vercelbadge.vercel.app/api/isyuricunha/links)](https://links.yuricunha.com)
+## Tech Stack
 
-My digital business card.
-
-- 🔥 Built with [Next.js](https://nextjs.org) and [React](https://reactjs.org)
-- 💽 Hosted on [Vercel](https://vercel.com)
+| Name       | Link                                                      |
+| ---------- | --------------------------------------------------------- |
+| Framework  | [Next.js](https://nextjs.org/)                            |
+| Deployment | [Vercel](https://vercel.com)                              |
+| Styling    | [Tailwindcss](https://tailwindcss.com)                    |
+| Icons      | [react-icons](https://react-icons.github.io/react-icons/) |
 
 ## Getting Started
 
-Clone this repository, then install all dependencies:
+Follow these steps to run the project locally on your machine:
+
+1. Clone the repository
 
 ```bash
-yarn
+git clone https://github.com/tszhong0411/links.git
 ```
 
-Run the development server:
+2. Navigate to the project directory
 
 ```bash
-yarn dev
+cd links
 ```
 
-## Inspired by
+3. Install dependencies
 
-This digital business card project is inspired by the digital business cards of [Didier Catz](https://didier.cz/) and [Jesse Vermeulen](https://jesse.es/).
+```bash
+pnpm install
+```
 
-## based on Lorenzo links
+4. Run the development server
 
-[Lorenzo Links Repo](https://github.com/lorenzodelijser/lorenzo.link)
+```bash
+pnpm dev
+```
+
+<hr>
+<p align="center">
+Made with ❤️ in Hong Kong
+</p>
