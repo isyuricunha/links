@@ -2,12 +2,12 @@
   "private": true,
   "name": "links",
   "version": "0.0.0",
-  "description": "tszhong0411's social media links",
+  "description": "isyuricunha's social media links",
   "license": "MIT",
-  "author": "tszhong0411 <me@honghong.me> (https://github.com/tszhong0411/)",
+  "author": "isyuricunha <me@yuricunha.com> (https://github.com/isyuricunha/)",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tszhong0411/links.git"
+    "url": "git+https://github.com/isyuricunha/links.git"
   },
   "type": "module",
   "scripts": {
