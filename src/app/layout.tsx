@@ -15,7 +15,7 @@ type RootLayoutProps = {
 
 const SITE_URL =
   process.env.NODE_ENV === 'production' ? 'https://links.yuricunha.com' : 'http://localhost:3000'
-const SITE_TITLE = 'Links | Yuri Cunha - Server Specialist'
+const SITE_TITLE = 'Links | Yuri Cunha - A dbA'
 const SITE_DESCRIPTION =
   'Connect with me on all my social media profiles through Links. Discover new content and stay updated with my latest posts!'
 
