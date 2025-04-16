@@ -7,7 +7,7 @@ import {
   SiInstagram,
   SiStackoverflow,
   SiSteam,
-  SiX,
+  SiX
 } from 'react-icons/si'
 
 import Spotlight from '@/components/spotlight'
