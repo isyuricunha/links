@@ -3,13 +3,11 @@ import { FiBook } from 'react-icons/fi'
 import {
   SiDevdotto,
   SiDiscord,
-  SiFacebook,
   SiGithub,
   SiInstagram,
   SiStackoverflow,
   SiSteam,
   SiX,
-  SiYoutube
 } from 'react-icons/si'
 
 import Spotlight from '@/components/spotlight'
