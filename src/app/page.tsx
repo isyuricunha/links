@@ -23,16 +23,6 @@ const links = [
     url: 'https://yuricunha.com/blog'
   },
   {
-    icon: <SiYoutube className='text-zinc-300' />,
-    title: 'YouTube',
-    url: 'https://www.youtube.com/@isyuricunha'
-  },
-  {
-    icon: <SiFacebook className='text-zinc-300' />,
-    title: 'Facebook',
-    url: 'https://www.facebook.com/isyuricunha/'
-  },
-  {
     icon: <SiSteam className='text-zinc-300' />,
     title: 'Steam',
     url: 'https://steamcommunity.com/id/isyuricunha/'
@@ -75,7 +65,7 @@ const HomePage = () => {
       <div className='relative mx-auto flex flex-col items-center justify-center gap-4 pb-10 pt-24'>
         <Spotlight className='-top-4 left-56' />
         <Image
-          src='https://beta.yuricunha.com/images/avatar.png'
+          src='https://yuricunha.com/images/avatar.png'
           width={90}
           height={90}
           alt='Logo'
@@ -83,7 +73,7 @@ const HomePage = () => {
           priority
         />
         <h1 className='text-xl font-semibold'>Yuri</h1>
-        <p className='text-[#a1a1a1]'>A Server Specialist</p>
+        <p className='text-[#a1a1a1]'>A dbA</p>
       </div>
       <PrimaryLinks />
       <div className='flex flex-col gap-4 py-3'>
