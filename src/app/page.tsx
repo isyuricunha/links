@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { FiBook } from 'react-icons/fi'
-import { SiDevdotto, SiDiscord, SiGithub, SiStackoverflow, SiSteam, SiX } from 'react-icons/si';
+import { SiDevdotto, SiDiscord, SiGithub, SiStackoverflow, SiSteam, SiX } from 'react-icons/si'
 
 import Spotlight from '@/components/spotlight'
 
