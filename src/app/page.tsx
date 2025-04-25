@@ -4,7 +4,6 @@ import {
   SiDevdotto,
   SiDiscord,
   SiGithub,
-  SiInstagram,
   SiStackoverflow,
   SiSteam,
   SiX
@@ -24,11 +23,6 @@ const links = [
     icon: <SiSteam className='text-zinc-300' />,
     title: 'Steam',
     url: 'https://steamcommunity.com/id/isyuricunha/'
-  },
-  {
-    icon: <SiInstagram className='text-zinc-300' />,
-    title: 'Instagram',
-    url: 'https://instagram.com/isyuricunha/'
   },
   {
     icon: <SiGithub className='text-zinc-300' />,
