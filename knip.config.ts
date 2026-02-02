@@ -5,6 +5,7 @@ const config = {
     "src/app/**/{opengraph-image,twitter-image}.{ts,tsx}",
   ],
   project: ["src/**/*.{ts,tsx}"],
+  ignoreDependencies: ["@commitlint/cli", "tailwindcss"],
   ignore: [
     "src/app/**/favicon.*",
     "src/app/**/apple-touch-icon.*",

@@ -29,7 +29,9 @@
     "@types/react-dom": "^19.2.3",
     "eslint": "^9.39.2",
     "eslint-config-next": "16.1.6",
+    "knip": "^5.83.0",
     "lefthook": "^2.0.16",
+    "postcss": "^8.5.6",
     "tailwindcss": "^4.1.18",
     "typescript": "^5.9.3"
   }
