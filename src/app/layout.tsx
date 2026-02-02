@@ -14,7 +14,9 @@ type RootLayoutProps = {
 }
 
 const SITE_URL =
-  process.env.NODE_ENV === 'production' ? 'https://links.yuricunha.com' : 'http://localhost:3000'
+  process.env.NODE_ENV === 'production'
+    ? 'https://links.yuricunha.com'
+    : 'http://localhost:3000'
 const SITE_TITLE = 'Links | Yuri Cunha - A dbA'
 const SITE_DESCRIPTION =
   'Connect with me on all my social media profiles through Links. Discover new content and stay updated with my latest posts!'
@@ -52,7 +54,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: SITE_URL
   },
-  keywords: ['isyuricunha', 'isyuricunha social media', 'isyuricunha links', 'links'],
+  keywords: [
+    'isyuricunha',
+    'isyuricunha social media',
+    'isyuricunha links',
+    'links'
+  ],
   creator: 'isyuricunha',
   openGraph: {
     url: SITE_URL,
@@ -113,13 +120,14 @@ const RootLayout = (props: RootLayoutProps) => {
         <div
           className='absolute inset-0 -z-20 size-full'
           style={{
-            backgroundImage: `url(${grid.src})`
+            backgroundImage: `url(${grid})`
           }}
         />
         <div
           className='absolute inset-0 -z-10 size-full'
           style={{
-            backgroundImage: 'linear-gradient(0deg, rgba(0,0,0,0.8) 20%, rgba(0,0,0,0) 100%)'
+            backgroundImage:
+              'linear-gradient(0deg, rgba(0,0,0,0.8) 20%, rgba(0,0,0,0) 100%)'
           }}
         />
         <div className='relative min-h-screen overflow-x-hidden'>

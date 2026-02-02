@@ -22,7 +22,7 @@
     "preinstall": "npx only-allow pnpm",
     "lint": "eslint . --max-warnings 0",
     "lint:fix": "eslint --fix .",
-    "prepare": "simple-git-hooks",
+    "prepare": "pnpm exec simple-git-hooks",
     "start": "next start",
     "type-check": "tsc --noEmit"
   },
@@ -32,7 +32,6 @@
     }
   },
   "dependencies": {
-    "@tszhong0411/utils": "^0.0.17",
     "geist": "^1.3.1",
     "next": "15.1.6",
     "react": "19.0.0",
@@ -40,20 +39,22 @@
     "react-icons": "^5.4.0"
   },
   "devDependencies": {
+    "@eslint/js": "^9.19.0",
+    "@next/eslint-plugin-next": "15.1.6",
     "@commitlint/cli": "19.6.1",
     "@commitlint/config-conventional": "19.6.0",
     "@cspell/dict-fullstack": "^3.2.3",
     "@cspell/dict-npm": "^5.1.23",
     "@cspell/dict-software-terms": "^4.2.4",
-    "@tszhong0411/eslint-config": "^0.1.26",
-    "@tszhong0411/prettier-config": "^0.0.13",
-    "@tszhong0411/tsconfig": "^0.0.10",
     "@types/node": "22.10.10",
     "@types/react": "19.0.8",
     "@types/react-dom": "19.0.3",
     "cspell": "^8.17.2",
     "cz-git": "^1.11.0",
     "eslint": "9.19.0",
+    "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "globals": "^15.14.0",
     "knip": "^5.43.3",
     "lint-staged": "^15.4.2",
     "postcss": "^8.5.1",
@@ -62,6 +63,7 @@
     "prettier": "^3.4.2",
     "simple-git-hooks": "^2.11.1",
     "tailwindcss": "^3.4.17",
+    "typescript-eslint": "^8.24.1",
     "typescript": "5.7.3"
   },
   "lint-staged": {

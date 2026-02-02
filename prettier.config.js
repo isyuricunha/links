@@ -1,3 +1,6 @@
-import tszhong0411 from '@tszhong0411/prettier-config'
-
-export default tszhong0411()
+export default {
+  semi: false,
+  singleQuote: true,
+  jsxSingleQuote: true,
+  trailingComma: 'none'
+}
