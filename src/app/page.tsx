@@ -84,6 +84,8 @@ export default function Home() {
     <div className="relative min-h-screen bg-background">
       <div className="pointer-events-none fixed inset-0 grid-background grid-mask opacity-60 motion-safe:animate-[grid-drift_28s_linear_infinite]" />
       <div className="pointer-events-none fixed inset-0 bg-[radial-gradient(65%_45%_at_50%_0%,rgba(255,122,24,0.16),transparent_62%)]" />
+      <div className="pointer-events-none fixed inset-0 aurora motion-safe:animate-[aurora-shift_18s_ease-in-out_infinite]" />
+      <div className="pointer-events-none fixed inset-0 scanlines motion-safe:animate-[scanline-shift_12s_linear_infinite]" />
       <div className="pointer-events-none fixed inset-0 vignette" />
 
       <main className="relative mx-auto flex w-full max-w-xl flex-col items-center px-6 pt-14 pb-24">
