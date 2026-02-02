@@ -21,6 +21,37 @@ const SITE_TITLE = 'Links | Yuri Cunha - A dbA'
 const SITE_DESCRIPTION =
   'Connect with me on all my social media profiles through Links. Discover new content and stay updated with my latest posts!'
 
+const structured_data = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: SITE_TITLE,
+    url: SITE_URL,
+    description: SITE_DESCRIPTION,
+    publisher: {
+      '@type': 'Person',
+      name: 'Yuri Cunha',
+      url: 'https://yuricunha.com',
+      sameAs: [
+        'https://github.com/isyuricunha',
+        'https://x.com/isyuricunha',
+        'https://dev.to/isyuricunha'
+      ]
+    }
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Yuri Cunha',
+    url: 'https://yuricunha.com',
+    sameAs: [
+      'https://github.com/isyuricunha',
+      'https://x.com/isyuricunha',
+      'https://dev.to/isyuricunha'
+    ]
+  }
+]
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: SITE_TITLE,
@@ -116,6 +147,14 @@ const RootLayout = (props: RootLayoutProps) => {
 
   return (
     <html lang='en-US' className={GeistSans.variable}>
+      <head>
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structured_data)
+          }}
+        />
+      </head>
       <body className='relative bg-[#020202] font-sans text-white'>
         <div
           className='absolute inset-0 -z-20 size-full'
