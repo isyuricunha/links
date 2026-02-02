@@ -115,7 +115,7 @@ export default function OpenGraphImage() {
               fontSize: 18,
             }}
           >
-            yuricunha.com
+            links.yuricunha.com
           </div>
         </div>
       </div>

@@ -99,7 +99,7 @@ export default function TwitterImage() {
                 color: "#a1a1aa",
               }}
             >
-              yuricunha.com
+              links.yuricunha.com
             </div>
           </div>
         </div>

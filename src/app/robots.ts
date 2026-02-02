@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 
 const siteUrl = (() => {
   const fromEnv = process.env.NEXT_PUBLIC_SITE_URL;
-  const fallback = "https://yuricunha.com";
+  const fallback = "https://links.yuricunha.com";
 
   try {
     return new URL(fromEnv ?? fallback);
