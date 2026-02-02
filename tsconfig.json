@@ -13,13 +13,9 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
+    "plugins": [{ "name": "next" }],
     "baseUrl": ".",
-    "jsx": "react-jsx",
+    "jsx": "preserve",
     "paths": {
       "@/*": ["src/*"]
     }
@@ -33,7 +29,6 @@
     ".next/types/**/*.ts",
     "postcss.config.mjs",
     "eslint.config.mjs",
-    "prettier.config.js",
-    ".next/dev/types/**/*.ts"
+    "prettier.config.js"
   ]
 }

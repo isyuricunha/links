@@ -1,18 +1,5 @@
 import { cn } from '@/utils/cn'
 
-const create_rng = (seed: number) => {
-  let state = seed >>> 0
-
-  return () => {
-    state = (1664525 * state + 1013904223) >>> 0
-    return state / 2 ** 32
-  }
-}
-
-const random_int = (rng: () => number, min: number, max: number) => {
-  return Math.floor(rng() * (max - min + 1) + min)
-}
-
 type SparkleButtonProps = {
   children: React.ReactNode
   className?: string
@@ -58,29 +45,30 @@ const SparkleButton = (props: SparkleButtonProps) => {
         className='absolute left-1/2 top-1/2 -z-10 aspect-square w-[200%] -translate-x-1/2 -translate-y-1/2 opacity-[var(--active,0)] [-webkit-mask:radial-gradient(white,transparent_65%)] [transition:opacity_var(--transition)] peer-hover:[--active:1] peer-hover:[--play-state:running]'
       >
         {[...Array.from({ length: 20 }).keys()].map((i) => {
-          const rng = create_rng(i + 1)
+          const RANDOM = (min: number, max: number) =>
+            Math.floor(Math.random() * (max - min + 1) + min)
 
           return (
             <Particle
               key={i}
               style={
                 {
-                  '--x': `${random_int(rng, 20, 80)}`,
-                  '--y': `${random_int(rng, 20, 80)}`,
-                  '--duration': `${random_int(rng, 6, 20)}`,
-                  '--delay': `${random_int(rng, 1, 10)}`,
-                  '--alpha': `${random_int(rng, 40, 90) / 100}`,
+                  '--x': `${RANDOM(20, 80)}`,
+                  '--y': `${RANDOM(20, 80)}`,
+                  '--duration': `${RANDOM(6, 20)}`,
+                  '--delay': `${RANDOM(1, 10)}`,
+                  '--alpha': `${RANDOM(40, 90) / 100}`,
                   '--origin-x': `${
-                    rng() > 0.5
-                      ? random_int(rng, 300, 800) * -1
-                      : random_int(rng, 300, 800)
+                    Math.random() > 0.5
+                      ? RANDOM(300, 800) * -1
+                      : RANDOM(300, 800)
                   }%`,
                   '--origin-y': `${
-                    rng() > 0.5
-                      ? random_int(rng, 300, 800) * -1
-                      : random_int(rng, 300, 800)
+                    Math.random() > 0.5
+                      ? RANDOM(300, 800) * -1
+                      : RANDOM(300, 800)
                   }%`,
-                  '--size': `${random_int(rng, 40, 90) / 100}`
+                  '--size': `${RANDOM(40, 90) / 100}`
                 } as React.CSSProperties
               }
             />
