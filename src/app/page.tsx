@@ -81,48 +81,63 @@ export default function Home() {
   const iconClassName =
     "size-4 text-muted transition-colors group-hover:text-foreground";
 
+  const sortedLinks = [...profile.links].sort((a, b) =>
+    a.label.localeCompare(b.label, "en", { sensitivity: "base" }),
+  );
+
   return (
     <div className="relative min-h-screen bg-background">
       <div className="pointer-events-none fixed inset-0 grid-background grid-mask opacity-60 motion-safe:animate-[grid-drift_28s_linear_infinite]" />
       <div className="pointer-events-none fixed inset-0 bg-[radial-gradient(65%_45%_at_50%_0%,rgba(255,122,24,0.16),transparent_62%)]" />
       <div className="pointer-events-none fixed inset-0 aurora motion-safe:animate-[aurora-shift_18s_ease-in-out_infinite]" />
       <div className="pointer-events-none fixed inset-0 scanlines motion-safe:animate-[scanline-shift_12s_linear_infinite]" />
-      <div className="pointer-events-none fixed inset-0 overflow-hidden bg-squares">
+      <div className="pointer-events-none fixed inset-0 overflow-hidden bg-shapes">
         <span
           className="motion-safe:animate-[square-float_26s_linear_infinite]"
           style={{ left: "6%", width: 18, height: 18, animationDelay: "-8s" }}
         />
         <span
+          data-shape="circle"
           className="motion-safe:animate-[square-float_32s_linear_infinite]"
-          style={{ left: "14%", width: 34, height: 34, animationDelay: "-22s" }}
+          style={{ left: "12%", width: 28, height: 28, animationDelay: "-22s" }}
         />
         <span
+          data-shape="triangle"
           className="motion-safe:animate-[square-float_20s_linear_infinite]"
-          style={{ left: "28%", width: 22, height: 22, animationDelay: "-12s" }}
+          style={{ left: "22%", width: 22, height: 22, animationDelay: "-12s" }}
         />
         <span
+          data-shape="cross"
           className="motion-safe:animate-[square-float_28s_linear_infinite]"
-          style={{ left: "42%", width: 42, height: 42, animationDelay: "-18s" }}
+          style={{ left: "32%", width: 20, height: 20, animationDelay: "-18s" }}
         />
         <span
           className="motion-safe:animate-[square-float_24s_linear_infinite]"
-          style={{ left: "54%", width: 26, height: 26, animationDelay: "-5s" }}
+          style={{ left: "42%", width: 42, height: 42, animationDelay: "-5s" }}
         />
         <span
+          data-shape="circle"
           className="motion-safe:animate-[square-float_36s_linear_infinite]"
-          style={{ left: "66%", width: 54, height: 54, animationDelay: "-28s" }}
+          style={{ left: "52%", width: 54, height: 54, animationDelay: "-28s" }}
         />
         <span
+          data-shape="triangle"
           className="motion-safe:animate-[square-float_22s_linear_infinite]"
-          style={{ left: "74%", width: 20, height: 20, animationDelay: "-9s" }}
+          style={{ left: "62%", width: 18, height: 18, animationDelay: "-9s" }}
         />
         <span
+          data-shape="cross"
           className="motion-safe:animate-[square-float_30s_linear_infinite]"
-          style={{ left: "82%", width: 30, height: 30, animationDelay: "-16s" }}
+          style={{ left: "72%", width: 24, height: 24, animationDelay: "-16s" }}
         />
         <span
+          data-shape="circle"
           className="motion-safe:animate-[square-float_26s_linear_infinite]"
-          style={{ left: "90%", width: 16, height: 16, animationDelay: "-2s" }}
+          style={{ left: "82%", width: 16, height: 16, animationDelay: "-2s" }}
+        />
+        <span
+          className="motion-safe:animate-[square-float_34s_linear_infinite]"
+          style={{ left: "90%", width: 28, height: 28, animationDelay: "-14s" }}
         />
       </div>
       <div className="pointer-events-none fixed inset-0 vignette" />
@@ -168,7 +183,7 @@ export default function Home() {
         </header>
 
         <section className="mt-10 flex w-full flex-col gap-3">
-          {profile.links.map((link, index) => (
+          {sortedLinks.map((link, index) => (
             <a
               key={link.href}
               href={link.href}
@@ -179,6 +194,10 @@ export default function Home() {
                 animationDelay: `${200 + index * 70}ms`,
               }}
             >
+              <span className="pointer-events-none absolute -inset-6 opacity-[0.10] transition-opacity duration-300 group-hover:opacity-[0.38] motion-safe:animate-[bubble-glow_5.6s_ease-in-out_infinite]">
+                <span className="absolute inset-0 rounded-[inherit] card-bubble" />
+              </span>
+
               <span className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                 <span className="absolute -top-24 left-1/2 size-64 -translate-x-1/2 rounded-full bg-[radial-gradient(circle,rgba(255,122,24,0.18),transparent_60%)]" />
                 <span className="absolute inset-0 bg-[linear-gradient(115deg,transparent_0%,rgba(244,244,245,0.07)_45%,transparent_60%)]" />

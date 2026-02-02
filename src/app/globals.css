@@ -95,6 +95,18 @@ body {
   }
 }
 
+@keyframes bubble-glow {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(0.96);
+    opacity: 0.12;
+  }
+  50% {
+    transform: translate3d(0, -6px, 0) scale(1.06);
+    opacity: 0.28;
+  }
+}
+
 .grid-background {
   background-image: linear-gradient(
       to right,
@@ -151,11 +163,11 @@ body {
   mix-blend-mode: overlay;
 }
 
-.bg-squares {
+.bg-shapes {
   isolation: isolate;
 }
 
-.bg-squares > span {
+.bg-shapes > span {
   position: absolute;
   bottom: -160px;
   border-radius: 10px;
@@ -167,4 +179,50 @@ body {
   );
   box-shadow: 0 18px 60px rgba(0, 0, 0, 0.6);
   will-change: transform, opacity;
+}
+
+.bg-shapes > span[data-shape="circle"] {
+  border-radius: 9999px;
+}
+
+.bg-shapes > span[data-shape="triangle"] {
+  border-radius: 0;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.bg-shapes > span[data-shape="cross"] {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.bg-shapes > span[data-shape="cross"]::before,
+.bg-shapes > span[data-shape="cross"]::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  background: linear-gradient(
+    145deg,
+    rgba(244, 244, 245, 0.10),
+    rgba(255, 122, 24, 0.08)
+  );
+}
+
+.bg-shapes > span[data-shape="cross"]::before {
+  transform: rotate(45deg);
+}
+
+.bg-shapes > span[data-shape="cross"]::after {
+  transform: rotate(-45deg);
+}
+
+.card-bubble {
+  background: radial-gradient(
+    45% 65% at 50% 40%,
+    rgba(255, 122, 24, 0.16),
+    transparent 70%
+  );
+  filter: blur(10px);
 }
