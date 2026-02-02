@@ -1,6 +1,5 @@
 import type { IconType } from "react-icons";
 import Image from "next/image";
-import fullLogo from "./full-logo.webp";
 import {
   FaDiscord,
   FaGithub,
@@ -130,12 +129,6 @@ export default function Home() {
 
       <main className="relative mx-auto flex w-full max-w-xl flex-col items-center px-6 pt-14 pb-24">
         <header className="flex w-full flex-col items-center gap-4 text-center motion-safe:animate-[fade-up_700ms_cubic-bezier(0.2,0.8,0.2,1)_both]">
-          <Image
-            src={fullLogo}
-            alt="Yuri links"
-            priority
-            className="h-8 w-auto opacity-90"
-          />
           <div className="relative">
             <div className="size-16 overflow-hidden rounded-full border border-border bg-[radial-gradient(circle_at_30%_20%,rgba(255,122,24,0.18),transparent_60%),linear-gradient(145deg,rgba(244,244,245,0.14),rgba(244,244,245,0.02))] motion-safe:animate-[accent-pulse_7s_ease-in-out_infinite]">
               <Image
