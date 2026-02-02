@@ -1,5 +1,16 @@
+import {
+  FaDiscord,
+  FaGithub,
+  FaStackOverflow,
+  FaSteam,
+} from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { SiDevdotto } from "react-icons/si";
+import { HiOutlineEnvelope, HiOutlineGlobeAlt } from "react-icons/hi2";
+import { LuFileText } from "react-icons/lu";
+
 export default function Home() {
-  type link_item = {
+  type linkItem = {
     label: string;
     href: string;
     icon: "blog" | "steam" | "github" | "discord" | "x" | "stackoverflow" | "devto";
@@ -7,10 +18,10 @@ export default function Home() {
 
   const profile = {
     name: "Yuri",
-    subtitle: "a dba",
+    subtitle: "a DBA",
     pills: [
-      { label: "Website", href: "https://isyuricunha.com" },
-      { label: "me@yuricunha.com", href: "mailto:me@yuricunha.com" },
+      { label: "Website", href: "https://isyuricunha.com", kind: "website" },
+      { label: "me@yuricunha.com", href: "mailto:me@yuricunha.com", kind: "email" },
     ],
     links: [
       { label: "Blog", href: "https://isyuricunha.com", icon: "blog" },
@@ -24,210 +35,30 @@ export default function Home() {
         icon: "stackoverflow",
       },
       { label: "Dev.to", href: "https://dev.to", icon: "devto" },
-    ] satisfies link_item[],
+    ] satisfies linkItem[],
   };
 
-  const icon = (name: link_item["icon"]) => {
-    const base =
-      "size-4 text-muted transition-colors group-hover:text-foreground";
+  const iconClassName =
+    "size-4 text-muted transition-colors group-hover:text-foreground";
 
+  const icon = (name: linkItem["icon"]) => {
     switch (name) {
       case "blog":
-        return (
-          <svg
-            className={base}
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M7 4H15L19 8V20H7V4Z"
-              stroke="currentColor"
-              strokeWidth="1.8"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M15 4V8H19"
-              stroke="currentColor"
-              strokeWidth="1.8"
-              strokeLinejoin="round"
-            />
-          </svg>
-        );
+        return <LuFileText className={iconClassName} aria-hidden="true" />;
       case "steam":
-        return (
-          <svg
-            className={base}
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M9.3 14.4L7.2 13.5C6.3 13.1 5.9 12 6.3 11.1C6.7 10.2 7.8 9.8 8.7 10.2L10.8 11.1"
-              stroke="currentColor"
-              strokeWidth="1.8"
-              strokeLinecap="round"
-            />
-            <path
-              d="M14.8 7.5a3.4 3.4 0 1 0 0 6.8a3.4 3.4 0 0 0 0-6.8Z"
-              stroke="currentColor"
-              strokeWidth="1.8"
-            />
-            <path
-              d="M12 12.1l-1.2 1.8"
-              stroke="currentColor"
-              strokeWidth="1.8"
-              strokeLinecap="round"
-            />
-          </svg>
-        );
+        return <FaSteam className={iconClassName} aria-hidden="true" />;
       case "github":
-        return (
-          <svg
-            className={base}
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M9 19c-3 1-3-1-4-1"
-              stroke="currentColor"
-              strokeWidth="1.8"
-              strokeLinecap="round"
-            />
-            <path
-              d="M15 19v-2.2c0-.6.2-1.1.6-1.5c2.1-.2 4.4-1.1 4.4-5a3.9 3.9 0 0 0-1.1-2.7c.3-.8.3-1.7 0-2.5c0 0-.9-.3-2.8 1.1a9.7 9.7 0 0 0-5.2 0C9 4.9 8.1 5.2 8.1 5.2c-.3.8-.3 1.7 0 2.5A3.9 3.9 0 0 0 7 10.3c0 3.9 2.3 4.8 4.4 5c.4.4.6.9.6 1.5V19"
-              stroke="currentColor"
-              strokeWidth="1.8"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        );
+        return <FaGithub className={iconClassName} aria-hidden="true" />;
       case "discord":
-        return (
-          <svg
-            className={base}
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M7.2 7.6c1.6-1.2 3.2-1.5 4.8-1.5s3.2.3 4.8 1.5"
-              stroke="currentColor"
-              strokeWidth="1.8"
-              strokeLinecap="round"
-            />
-            <path
-              d="M8.2 17.8c1.2.8 2.5 1.2 3.8 1.2s2.6-.4 3.8-1.2"
-              stroke="currentColor"
-              strokeWidth="1.8"
-              strokeLinecap="round"
-            />
-            <path
-              d="M8 16c-1.2-2.6-1.3-5.4-.1-8"
-              stroke="currentColor"
-              strokeWidth="1.8"
-              strokeLinecap="round"
-            />
-            <path
-              d="M16 16c1.2-2.6 1.3-5.4.1-8"
-              stroke="currentColor"
-              strokeWidth="1.8"
-              strokeLinecap="round"
-            />
-            <path
-              d="M9.5 13.2h.1"
-              stroke="currentColor"
-              strokeWidth="2.4"
-              strokeLinecap="round"
-            />
-            <path
-              d="M14.4 13.2h.1"
-              stroke="currentColor"
-              strokeWidth="2.4"
-              strokeLinecap="round"
-            />
-          </svg>
-        );
+        return <FaDiscord className={iconClassName} aria-hidden="true" />;
       case "x":
-        return (
-          <svg
-            className={base}
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M7 17L17 7"
-              stroke="currentColor"
-              strokeWidth="1.8"
-              strokeLinecap="round"
-            />
-            <path
-              d="M7 7l10 10"
-              stroke="currentColor"
-              strokeWidth="1.8"
-              strokeLinecap="round"
-            />
-          </svg>
-        );
+        return <FaXTwitter className={iconClassName} aria-hidden="true" />;
       case "stackoverflow":
         return (
-          <svg
-            className={base}
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M8 20h10v-6"
-              stroke="currentColor"
-              strokeWidth="1.8"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M9 16h7"
-              stroke="currentColor"
-              strokeWidth="1.8"
-              strokeLinecap="round"
-            />
-            <path
-              d="M9.4 13.3l6.8 1.4"
-              stroke="currentColor"
-              strokeWidth="1.8"
-              strokeLinecap="round"
-            />
-            <path
-              d="M10.4 10.2l6.1 2.9"
-              stroke="currentColor"
-              strokeWidth="1.8"
-              strokeLinecap="round"
-            />
-          </svg>
+          <FaStackOverflow className={iconClassName} aria-hidden="true" />
         );
       case "devto":
-        return (
-          <svg
-            className={base}
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M7 8v8"
-              stroke="currentColor"
-              strokeWidth="1.8"
-              strokeLinecap="round"
-            />
-            <path
-              d="M10 8h3.2c1.8 0 3.8 1.5 3.8 4s-2 4-3.8 4H10V8Z"
-              stroke="currentColor"
-              strokeWidth="1.8"
-              strokeLinejoin="round"
-            />
-          </svg>
-        );
+        return <SiDevdotto className={iconClassName} aria-hidden="true" />;
     }
   };
 
@@ -268,7 +99,14 @@ export default function Home() {
                 rel="noreferrer"
                 className="rounded-full border border-border bg-surface px-5 py-2 text-xs text-muted transition-colors hover:border-accent/40 hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/40"
               >
-                {pill.label}
+                <span className="inline-flex items-center gap-2">
+                  {pill.kind === "email" ? (
+                    <HiOutlineEnvelope className="size-4 text-muted" aria-hidden="true" />
+                  ) : (
+                    <HiOutlineGlobeAlt className="size-4 text-muted" aria-hidden="true" />
+                  )}
+                  {pill.label}
+                </span>
               </a>
             ))}
           </div>
