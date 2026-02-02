@@ -78,6 +78,23 @@ body {
   }
 }
 
+@keyframes square-float {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.55;
+  }
+  60% {
+    opacity: 0.35;
+  }
+  100% {
+    transform: translate3d(0, -120vh, 0) rotate(28deg);
+    opacity: 0;
+  }
+}
+
 .grid-background {
   background-image: linear-gradient(
       to right,
@@ -132,4 +149,22 @@ body {
   );
   opacity: 0.22;
   mix-blend-mode: overlay;
+}
+
+.bg-squares {
+  isolation: isolate;
+}
+
+.bg-squares > span {
+  position: absolute;
+  bottom: -160px;
+  border-radius: 10px;
+  border: 1px solid rgba(244, 244, 245, 0.10);
+  background: linear-gradient(
+    145deg,
+    rgba(244, 244, 245, 0.07),
+    rgba(255, 122, 24, 0.04)
+  );
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.6);
+  will-change: transform, opacity;
 }

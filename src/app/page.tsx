@@ -1,4 +1,6 @@
 import type { IconType } from "react-icons";
+import Image from "next/image";
+import fullLogo from "./full-logo.webp";
 import {
   FaDiscord,
   FaGithub,
@@ -86,21 +88,64 @@ export default function Home() {
       <div className="pointer-events-none fixed inset-0 bg-[radial-gradient(65%_45%_at_50%_0%,rgba(255,122,24,0.16),transparent_62%)]" />
       <div className="pointer-events-none fixed inset-0 aurora motion-safe:animate-[aurora-shift_18s_ease-in-out_infinite]" />
       <div className="pointer-events-none fixed inset-0 scanlines motion-safe:animate-[scanline-shift_12s_linear_infinite]" />
+      <div className="pointer-events-none fixed inset-0 overflow-hidden bg-squares">
+        <span
+          className="motion-safe:animate-[square-float_26s_linear_infinite]"
+          style={{ left: "6%", width: 18, height: 18, animationDelay: "-8s" }}
+        />
+        <span
+          className="motion-safe:animate-[square-float_32s_linear_infinite]"
+          style={{ left: "14%", width: 34, height: 34, animationDelay: "-22s" }}
+        />
+        <span
+          className="motion-safe:animate-[square-float_20s_linear_infinite]"
+          style={{ left: "28%", width: 22, height: 22, animationDelay: "-12s" }}
+        />
+        <span
+          className="motion-safe:animate-[square-float_28s_linear_infinite]"
+          style={{ left: "42%", width: 42, height: 42, animationDelay: "-18s" }}
+        />
+        <span
+          className="motion-safe:animate-[square-float_24s_linear_infinite]"
+          style={{ left: "54%", width: 26, height: 26, animationDelay: "-5s" }}
+        />
+        <span
+          className="motion-safe:animate-[square-float_36s_linear_infinite]"
+          style={{ left: "66%", width: 54, height: 54, animationDelay: "-28s" }}
+        />
+        <span
+          className="motion-safe:animate-[square-float_22s_linear_infinite]"
+          style={{ left: "74%", width: 20, height: 20, animationDelay: "-9s" }}
+        />
+        <span
+          className="motion-safe:animate-[square-float_30s_linear_infinite]"
+          style={{ left: "82%", width: 30, height: 30, animationDelay: "-16s" }}
+        />
+        <span
+          className="motion-safe:animate-[square-float_26s_linear_infinite]"
+          style={{ left: "90%", width: 16, height: 16, animationDelay: "-2s" }}
+        />
+      </div>
       <div className="pointer-events-none fixed inset-0 vignette" />
 
       <main className="relative mx-auto flex w-full max-w-xl flex-col items-center px-6 pt-14 pb-24">
         <header className="flex w-full flex-col items-center gap-4 text-center motion-safe:animate-[fade-up_700ms_cubic-bezier(0.2,0.8,0.2,1)_both]">
+          <Image
+            src={fullLogo}
+            alt="Yuri links"
+            priority
+            className="h-8 w-auto opacity-90"
+          />
           <div className="relative">
-            <div className="size-16 overflow-hidden rounded-full border border-border bg-[radial-gradient(circle_at_30%_20%,rgba(255,122,24,0.18),transparent_60%),linear-gradient(145deg,rgba(244,244,245,0.14),rgba(244,244,245,0.02))] motion-safe:animate-[accent-pulse_7s_ease-in-out_infinite]" />
-            <div className="pointer-events-none absolute inset-0 grid place-items-center rounded-full">
-              <span className="text-sm font-semibold tracking-tight text-foreground">
-                {profile.name
-                  .split(" ")
-                  .slice(0, 2)
-                  .map((part) => part[0])
-                  .join("")
-                  .toUpperCase()}
-              </span>
+            <div className="size-16 overflow-hidden rounded-full border border-border bg-[radial-gradient(circle_at_30%_20%,rgba(255,122,24,0.18),transparent_60%),linear-gradient(145deg,rgba(244,244,245,0.14),rgba(244,244,245,0.02))] motion-safe:animate-[accent-pulse_7s_ease-in-out_infinite]">
+              <Image
+                src="/me.png"
+                alt="Yuri Cunha"
+                width={64}
+                height={64}
+                priority
+                className="size-16 object-cover"
+              />
             </div>
           </div>
 
