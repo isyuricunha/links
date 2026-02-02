@@ -85,60 +85,141 @@ export default function Home() {
     a.label.localeCompare(b.label, "en", { sensitivity: "base" }),
   );
 
+  const sqlJokes = [
+    {
+      id: "j1",
+      lines: [
+        { type: "comment", text: "-- production checklist" },
+        { type: "keyword", text: "SELECT" },
+        { type: "text", text: " * " },
+        { type: "keyword", text: "FROM" },
+        { type: "text", text: " coffee;" },
+        { type: "comment", text: "-- WHERE it = 'needed'" },
+      ],
+    },
+    {
+      id: "j2",
+      lines: [
+        { type: "comment", text: "-- performance tuning" },
+        { type: "keyword", text: "EXPLAIN" },
+        { type: "text", text: " ANALYZE " },
+        { type: "keyword", text: "SELECT" },
+        { type: "text", text: " sleep(0);" },
+      ],
+    },
+    {
+      id: "j3",
+      lines: [
+        { type: "comment", text: "-- the DBA's favorite relationship" },
+        { type: "keyword", text: "LEFT" },
+        { type: "text", text: " " },
+        { type: "keyword", text: "JOIN" },
+        { type: "text", text: " feelings f ON f.user_id = me.id" },
+        { type: "comment", text: "-- returns NULL" },
+      ],
+    },
+    {
+      id: "j4",
+      lines: [
+        { type: "comment", text: "-- daily standup" },
+        { type: "keyword", text: "UPDATE" },
+        { type: "text", text: " status " },
+        { type: "keyword", text: "SET" },
+        { type: "text", text: " done = true " },
+        { type: "keyword", text: "WHERE" },
+        { type: "text", text: " ticket = 'soon';" },
+      ],
+    },
+    {
+      id: "j5",
+      lines: [
+        { type: "comment", text: "-- risky business" },
+        { type: "keyword", text: "DROP" },
+        { type: "text", text: " " },
+        { type: "keyword", text: "TABLE" },
+        { type: "text", text: " bad_ideas;" },
+        { type: "comment", text: "-- just kidding" },
+      ],
+    },
+  ] as const;
+
   return (
     <div className="relative min-h-screen bg-background">
       <div className="pointer-events-none fixed inset-0 grid-background grid-mask opacity-60 motion-safe:animate-[grid-drift_28s_linear_infinite]" />
       <div className="pointer-events-none fixed inset-0 bg-[radial-gradient(65%_45%_at_50%_0%,rgba(255,122,24,0.16),transparent_62%)]" />
       <div className="pointer-events-none fixed inset-0 aurora motion-safe:animate-[aurora-shift_18s_ease-in-out_infinite]" />
       <div className="pointer-events-none fixed inset-0 scanlines motion-safe:animate-[scanline-shift_12s_linear_infinite]" />
-      <div className="pointer-events-none fixed inset-0 overflow-hidden bg-shapes">
-        <span
-          className="motion-safe:animate-[square-float_26s_linear_infinite]"
-          style={{ left: "6%", width: 18, height: 18, animationDelay: "-8s" }}
-        />
-        <span
-          data-shape="circle"
-          className="motion-safe:animate-[square-float_32s_linear_infinite]"
-          style={{ left: "12%", width: 28, height: 28, animationDelay: "-22s" }}
-        />
-        <span
-          data-shape="triangle"
-          className="motion-safe:animate-[square-float_20s_linear_infinite]"
-          style={{ left: "22%", width: 22, height: 22, animationDelay: "-12s" }}
-        />
-        <span
-          data-shape="cross"
-          className="motion-safe:animate-[square-float_28s_linear_infinite]"
-          style={{ left: "32%", width: 20, height: 20, animationDelay: "-18s" }}
-        />
-        <span
-          className="motion-safe:animate-[square-float_24s_linear_infinite]"
-          style={{ left: "42%", width: 42, height: 42, animationDelay: "-5s" }}
-        />
-        <span
-          data-shape="circle"
-          className="motion-safe:animate-[square-float_36s_linear_infinite]"
-          style={{ left: "52%", width: 54, height: 54, animationDelay: "-28s" }}
-        />
-        <span
-          data-shape="triangle"
-          className="motion-safe:animate-[square-float_22s_linear_infinite]"
-          style={{ left: "62%", width: 18, height: 18, animationDelay: "-9s" }}
-        />
-        <span
-          data-shape="cross"
-          className="motion-safe:animate-[square-float_30s_linear_infinite]"
-          style={{ left: "72%", width: 24, height: 24, animationDelay: "-16s" }}
-        />
-        <span
-          data-shape="circle"
-          className="motion-safe:animate-[square-float_26s_linear_infinite]"
-          style={{ left: "82%", width: 16, height: 16, animationDelay: "-2s" }}
-        />
-        <span
-          className="motion-safe:animate-[square-float_34s_linear_infinite]"
-          style={{ left: "90%", width: 28, height: 28, animationDelay: "-14s" }}
-        />
+      <div className="pointer-events-none fixed inset-0 overflow-hidden bg-sql opacity-60">
+        <div className="absolute inset-0 grid grid-cols-3 gap-8 px-8">
+          {[
+            { left: true, duration: "38s", delay: "-6s" },
+            { left: false, duration: "44s", delay: "-18s" },
+            { left: true, duration: "40s", delay: "-28s" },
+          ].map((col, colIndex) => (
+            <div
+              key={`sql-col-${colIndex}`}
+              className="relative overflow-hidden"
+              style={{
+                maskImage:
+                  "linear-gradient(to bottom, transparent 0%, black 18%, black 82%, transparent 100%)",
+              }}
+            >
+              <div
+                className="bg-sql-column"
+                style={{
+                  ['--sql-duration' as string]: col.duration,
+                  animationDelay: col.delay,
+                }}
+              >
+                <div className="bg-sql-code whitespace-pre-wrap">
+                  {sqlJokes.map((block) => (
+                    <div key={`${block.id}-a`} className="mb-10">
+                      {block.lines.map((token, tokenIndex) => (
+                        <span
+                          key={`${block.id}-a-${tokenIndex}`}
+                          className={
+                            token.type === "keyword"
+                              ? "sql-keyword"
+                              : token.type === "comment"
+                                ? "sql-comment"
+                                : undefined
+                          }
+                        >
+                          {token.text}
+                          {token.type === "comment" ? "\n" : ""}
+                        </span>
+                      ))}
+                      <span className="sql-caret" />
+                    </div>
+                  ))}
+                </div>
+
+                <div className="bg-sql-code whitespace-pre-wrap">
+                  {sqlJokes.map((block) => (
+                    <div key={`${block.id}-b`} className="mb-10">
+                      {block.lines.map((token, tokenIndex) => (
+                        <span
+                          key={`${block.id}-b-${tokenIndex}`}
+                          className={
+                            token.type === "keyword"
+                              ? "sql-keyword"
+                              : token.type === "comment"
+                                ? "sql-comment"
+                                : undefined
+                          }
+                        >
+                          {token.text}
+                          {token.type === "comment" ? "\n" : ""}
+                        </span>
+                      ))}
+                      <span className="sql-caret" />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
       <div className="pointer-events-none fixed inset-0 vignette" />
 
