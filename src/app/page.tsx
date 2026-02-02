@@ -1,66 +1,84 @@
+import type { IconType } from "react-icons";
 import {
   FaDiscord,
   FaGithub,
+  FaHackerNews,
+  FaLinkedin,
+  FaMedium,
+  FaPinterest,
+  FaRedditAlien,
   FaStackOverflow,
   FaSteam,
+  FaTwitch,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { SiDevdotto } from "react-icons/si";
-import { HiOutlineEnvelope, HiOutlineGlobeAlt } from "react-icons/hi2";
-import { LuFileText } from "react-icons/lu";
+import { HiOutlineEnvelope, HiOutlineGlobeAlt, HiOutlineShieldCheck } from "react-icons/hi2";
+import { SiDevdotto, SiHuggingface, SiMyanimelist, SiNexusmods } from "react-icons/si";
+import { LuFileText, LuRss } from "react-icons/lu";
 
 export default function Home() {
   type linkItem = {
     label: string;
     href: string;
-    icon: "blog" | "steam" | "github" | "discord" | "x" | "stackoverflow" | "devto";
+    icon: IconType;
+  };
+
+  type pillItem = {
+    label: string;
+    href: string;
+    icon: IconType;
   };
 
   const profile = {
     name: "Yuri",
     subtitle: "a DBA",
     pills: [
-      { label: "Website", href: "https://isyuricunha.com", kind: "website" },
-      { label: "me@yuricunha.com", href: "mailto:me@yuricunha.com", kind: "email" },
+      { label: "Website", href: "https://yuricunha.com", icon: HiOutlineGlobeAlt },
+      { label: "me@yuricunha.com", href: "mailto:me@yuricunha.com", icon: HiOutlineEnvelope },
     ],
     links: [
-      { label: "Blog", href: "https://isyuricunha.com", icon: "blog" },
-      { label: "Steam", href: "https://steamcommunity.com", icon: "steam" },
-      { label: "GitHub", href: "https://github.com", icon: "github" },
-      { label: "Discord", href: "https://discord.com", icon: "discord" },
-      { label: "X", href: "https://x.com", icon: "x" },
+      { label: "Website", href: "https://yuricunha.com/", icon: HiOutlineGlobeAlt },
+      { label: "Blog", href: "https://yuricunha.com/blog", icon: LuFileText },
+      { label: "Bear Blog", href: "https://yuricunha.bearblog.dev/", icon: LuRss },
+
+      { label: "GitHub", href: "https://github.com/isyuricunha", icon: FaGithub },
+      { label: "Gist", href: "https://gist.github.com/isyuricunha", icon: FaGithub },
+      { label: "LinkedIn", href: "https://br.linkedin.com/in/isyuricunha", icon: FaLinkedin },
+
+      { label: "X", href: "https://x.com/isyuricunha", icon: FaXTwitter },
       {
         label: "Stack Overflow",
-        href: "https://stackoverflow.com",
-        icon: "stackoverflow",
+        href: "https://stackoverflow.com/users/19750503/yuri-cunha",
+        icon: FaStackOverflow,
       },
-      { label: "Dev.to", href: "https://dev.to", icon: "devto" },
+      { label: "Dev.to", href: "https://dev.to/isyuricunha", icon: SiDevdotto },
+      { label: "Medium", href: "https://medium.com/@isyuricunha", icon: FaMedium },
+      { label: "Hugging Face", href: "https://huggingface.co/isyuricunha", icon: SiHuggingface },
+
+      { label: "Discord", href: "https://discordapp.com/users/1018988240151253002", icon: FaDiscord },
+      { label: "Steam", href: "https://steamcommunity.com/id/isyuricunha/", icon: FaSteam },
+      { label: "Twitch", href: "https://www.twitch.tv/isyuricunha/", icon: FaTwitch },
+
+      { label: "Reddit", href: "https://www.reddit.com/user/isyuricunha/", icon: FaRedditAlien },
+      { label: "Pinterest", href: "https://www.pinterest.com/isyuricunha/", icon: FaPinterest },
+      { label: "Nexus Mods", href: "https://www.nexusmods.com/profile/isyuricunha/", icon: SiNexusmods },
+      { label: "MyAnimeList", href: "https://myanimelist.net/profile/isyuricunha", icon: SiMyanimelist },
+      {
+        label: "Privacy Guides Forum",
+        href: "https://discuss.privacyguides.net/u/isyuricunha/summary",
+        icon: HiOutlineShieldCheck,
+      },
+      { label: "Hacker News", href: "https://news.ycombinator.com/user?id=isyuricunha", icon: FaHackerNews },
     ] satisfies linkItem[],
+  } satisfies {
+    name: string;
+    subtitle: string;
+    pills: pillItem[];
+    links: linkItem[];
   };
 
   const iconClassName =
     "size-4 text-muted transition-colors group-hover:text-foreground";
-
-  const icon = (name: linkItem["icon"]) => {
-    switch (name) {
-      case "blog":
-        return <LuFileText className={iconClassName} aria-hidden="true" />;
-      case "steam":
-        return <FaSteam className={iconClassName} aria-hidden="true" />;
-      case "github":
-        return <FaGithub className={iconClassName} aria-hidden="true" />;
-      case "discord":
-        return <FaDiscord className={iconClassName} aria-hidden="true" />;
-      case "x":
-        return <FaXTwitter className={iconClassName} aria-hidden="true" />;
-      case "stackoverflow":
-        return (
-          <FaStackOverflow className={iconClassName} aria-hidden="true" />
-        );
-      case "devto":
-        return <SiDevdotto className={iconClassName} aria-hidden="true" />;
-    }
-  };
 
   return (
     <div className="relative min-h-screen bg-background">
@@ -101,11 +119,7 @@ export default function Home() {
                 className="rounded-full border border-border bg-surface px-5 py-2 text-xs text-muted transition-colors hover:border-accent/40 hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/40"
               >
                 <span className="inline-flex items-center gap-2">
-                  {pill.kind === "email" ? (
-                    <HiOutlineEnvelope className="size-4 text-muted" aria-hidden="true" />
-                  ) : (
-                    <HiOutlineGlobeAlt className="size-4 text-muted" aria-hidden="true" />
-                  )}
+                  <pill.icon className="size-4 text-muted" aria-hidden="true" />
                   {pill.label}
                 </span>
               </a>
@@ -130,7 +144,9 @@ export default function Home() {
                 <span className="absolute inset-0 bg-[linear-gradient(115deg,transparent_0%,rgba(244,244,245,0.07)_45%,transparent_60%)]" />
               </span>
 
-              <span className="relative z-10 grid place-items-center">{icon(link.icon)}</span>
+              <span className="relative z-10 grid place-items-center">
+                <link.icon className={iconClassName} aria-hidden="true" />
+              </span>
               <span className="relative z-10 text-center font-medium tracking-tight">
                 {link.label}
               </span>
