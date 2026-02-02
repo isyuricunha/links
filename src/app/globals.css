@@ -38,6 +38,25 @@ body {
   }
 }
 
+@keyframes grid-drift {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 48px 48px;
+  }
+}
+
+@keyframes accent-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 122, 24, 0);
+  }
+  50% {
+    box-shadow: 0 0 0 12px rgba(255, 122, 24, 0.06);
+  }
+}
+
 .grid-background {
   background-image: linear-gradient(
       to right,
@@ -51,4 +70,12 @@ body {
 
 .grid-mask {
   mask-image: radial-gradient(circle at 50% 20%, black 45%, transparent 78%);
+}
+
+.vignette {
+  background: radial-gradient(
+    80% 65% at 50% 20%,
+    rgba(0, 0, 0, 0) 45%,
+    rgba(0, 0, 0, 0.78) 100%
+  );
 }

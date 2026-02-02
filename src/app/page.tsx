@@ -64,13 +64,14 @@ export default function Home() {
 
   return (
     <div className="relative min-h-screen bg-background">
-      <div className="pointer-events-none fixed inset-0 grid-background grid-mask opacity-60" />
+      <div className="pointer-events-none fixed inset-0 grid-background grid-mask opacity-60 motion-safe:animate-[grid-drift_28s_linear_infinite]" />
       <div className="pointer-events-none fixed inset-0 bg-[radial-gradient(65%_45%_at_50%_0%,rgba(255,122,24,0.16),transparent_62%)]" />
+      <div className="pointer-events-none fixed inset-0 vignette" />
 
       <main className="relative mx-auto flex w-full max-w-xl flex-col items-center px-6 pt-14 pb-24">
         <header className="flex w-full flex-col items-center gap-4 text-center motion-safe:animate-[fade-up_700ms_cubic-bezier(0.2,0.8,0.2,1)_both]">
           <div className="relative">
-            <div className="size-16 overflow-hidden rounded-full border border-border bg-[radial-gradient(circle_at_30%_20%,rgba(255,122,24,0.18),transparent_60%),linear-gradient(145deg,rgba(244,244,245,0.14),rgba(244,244,245,0.02))]" />
+            <div className="size-16 overflow-hidden rounded-full border border-border bg-[radial-gradient(circle_at_30%_20%,rgba(255,122,24,0.18),transparent_60%),linear-gradient(145deg,rgba(244,244,245,0.14),rgba(244,244,245,0.02))] motion-safe:animate-[accent-pulse_7s_ease-in-out_infinite]" />
             <div className="pointer-events-none absolute inset-0 grid place-items-center rounded-full">
               <span className="text-sm font-semibold tracking-tight text-foreground">
                 {profile.name
@@ -119,16 +120,21 @@ export default function Home() {
               href={link.href}
               target="_blank"
               rel="noreferrer"
-              className="group grid w-full grid-cols-[28px_1fr_28px] items-center rounded-xl border border-border bg-surface px-4 py-3.5 text-sm text-foreground transition-colors hover:border-accent/40 hover:bg-[rgba(255,122,24,0.06)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/40 motion-safe:animate-[fade-up_700ms_cubic-bezier(0.2,0.8,0.2,1)_both]"
+              className="group relative grid w-full grid-cols-[28px_1fr_28px] items-center overflow-hidden rounded-xl border border-border bg-surface px-4 py-3.5 text-sm text-foreground transition-colors duration-200 hover:border-accent/40 hover:bg-[rgba(255,122,24,0.06)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/40 motion-safe:animate-[fade-up_700ms_cubic-bezier(0.2,0.8,0.2,1)_both] motion-safe:transition-[transform,box-shadow,border-color,background-color] motion-safe:hover:-translate-y-0.5 motion-safe:hover:shadow-[0_14px_40px_rgba(0,0,0,0.55)]"
               style={{
                 animationDelay: `${200 + index * 70}ms`,
               }}
             >
-              <span className="grid place-items-center">{icon(link.icon)}</span>
-              <span className="text-center font-medium tracking-tight">
+              <span className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                <span className="absolute -top-24 left-1/2 size-64 -translate-x-1/2 rounded-full bg-[radial-gradient(circle,rgba(255,122,24,0.18),transparent_60%)]" />
+                <span className="absolute inset-0 bg-[linear-gradient(115deg,transparent_0%,rgba(244,244,245,0.07)_45%,transparent_60%)]" />
+              </span>
+
+              <span className="relative z-10 grid place-items-center">{icon(link.icon)}</span>
+              <span className="relative z-10 text-center font-medium tracking-tight">
                 {link.label}
               </span>
-              <span className="grid place-items-center">
+              <span className="relative z-10 grid place-items-center">
                 <span className="size-1.5 rounded-full bg-accent/70 opacity-0 transition-opacity duration-200 group-hover:opacity-100" />
               </span>
             </a>
