@@ -7,7 +7,7 @@ export default function Home() {
 
   const profile = {
     name: "Yuri",
-    subtitle: "A dbA",
+    subtitle: "a dba",
     pills: [
       { label: "Website", href: "https://isyuricunha.com" },
       { label: "me@yuricunha.com", href: "mailto:me@yuricunha.com" },
@@ -19,7 +19,7 @@ export default function Home() {
       { label: "Discord", href: "https://discord.com", icon: "discord" },
       { label: "X", href: "https://x.com", icon: "x" },
       {
-        label: "Stack overflow",
+        label: "Stack Overflow",
         href: "https://stackoverflow.com",
         icon: "stackoverflow",
       },
