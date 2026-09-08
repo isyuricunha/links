@@ -32,7 +32,7 @@ export default function Home() {
 
   const profile = {
     name: "Yuri",
-    subtitle: "a DBA",
+    subtitle: "Infrastructure & Platform Engineer",
     pills: [
       { label: "Website", href: "https://yuricunha.com", icon: HiOutlineGlobeAlt },
       { label: "me@yuricunha.com", href: "mailto:me@yuricunha.com", icon: HiOutlineEnvelope },
